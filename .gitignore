@@ -1,0 +1,16 @@
+# Rust build artifacts
+/rust/target/
+**/target/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

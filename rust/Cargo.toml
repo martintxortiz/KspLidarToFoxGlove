@@ -1,0 +1,16 @@
+[package]
+name = "ksp_lidar_bridge"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "ksp_lidar_bridge"
+path = "src/main.rs"
+
+[dependencies]
+foxglove = "0.25"
+krpc-client = "0.6"
+
+[profile.release]
+opt-level = 3
+lto = true

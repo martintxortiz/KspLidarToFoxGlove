@@ -1,0 +1,2 @@
+krpc
+foxglove-sdk>=0.25.1

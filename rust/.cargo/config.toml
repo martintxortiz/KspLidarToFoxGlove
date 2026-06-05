@@ -1,0 +1,4 @@
+# Point krpc-client's code generator at our service JSONs (Core + SpaceCenter +
+# LiDAR). `relative = true` resolves this to an absolute path at build time.
+[env]
+KRPC_SERVICES = { value = "services", relative = true }
