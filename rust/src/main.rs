@@ -16,6 +16,9 @@ use krpc_client::services::space_center::SpaceCenter;
 use krpc_client::Client;
 
 // --- settings ---------------------------------------------------------------
+// Where KSP/kRPC is running. "127.0.0.1" = same machine. Set to the game PC's
+// LAN IP (e.g. "192.168.1.166") to run the bridge from another machine.
+const KRPC_HOST: &str = "127.0.0.1";
 const TAG: &str = "laser";
 const TICK_SPACING: f32 = 0.0;
 const FRAME: &str = "world";
@@ -304,7 +307,7 @@ fn identity_pose() -> Pose {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let client = Client::new("KSP LiDAR -> Foxglove", "127.0.0.1", 50000, 50001)?;
+    let client = Client::new("KSP LiDAR -> Foxglove", KRPC_HOST, 50000, 50001)?;
     println!("Connected to kRPC.");
     let sc = SpaceCenter::new(client.clone());
     let lidar = LiDAR::new(client.clone());
