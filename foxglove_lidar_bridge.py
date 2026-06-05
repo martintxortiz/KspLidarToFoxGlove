@@ -252,11 +252,11 @@ def main():
     print(f"Vertical bend field: {bend_field!r}  (sweep +/-{bend_limit:.1f} deg)")
 
     server = foxglove.start_server(
-        name="KSP LiDAR", host="127.0.0.1", port=8765, message_backlog_size=1
+        name="KSP LiDAR", host="0.0.0.0", port=8765, message_backlog_size=1
     )
     channel = PointCloudChannel(TOPIC)
     box_channel = SceneUpdateChannel(BOX_TOPIC)
-    print(f"Foxglove: ws://127.0.0.1:8765   fixed frame: {FRAME}")
+    print(f"Foxglove: ws://<this-machine-ip>:8765   fixed frame: {FRAME}")
     print(f"  point cloud: {TOPIC}")
     print(f"  vehicle box: {BOX_TOPIC}")
     print("Scanning. Ctrl+C to stop.")

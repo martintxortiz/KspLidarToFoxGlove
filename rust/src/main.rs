@@ -376,9 +376,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let _server = foxglove::WebSocketServer::new()
         .name("KSP LiDAR")
-        .bind("127.0.0.1", 8765)
+        .bind("0.0.0.0", 8765)
         .start_blocking()?;
-    println!("Foxglove: ws://127.0.0.1:8765  fixed frame: {FRAME}");
+    println!("Foxglove: ws://<this-machine-ip>:8765  fixed frame: {FRAME}");
     println!("  point cloud: /ksp/lidar/points");
     println!("  vehicle box: /ksp/vehicle");
     println!("Scanning. Ctrl+C to stop.");
