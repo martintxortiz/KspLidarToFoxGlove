@@ -32,7 +32,7 @@ from foxglove.messages import (
 # --- settings ---------------------------------------------------------------
 # Where KSP/kRPC is running. "127.0.0.1" = same machine as this script.
 # Set to the game PC's LAN IP (e.g. "192.168.1.166") to run the bridge remotely.
-KRPC_HOST = "127.0.0.1"
+KRPC_HOST = "192.168.1.166"
 TAG = "laser"  # part tag you set in the editor
 TICK_SPACING = 0.0  # LiDAR "Tick Skip" field
 TOPIC = "/ksp/lidar/points"
